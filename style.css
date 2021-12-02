@@ -65,17 +65,6 @@ body {
   transform: rotate(-45deg);
 }
 
-/* #close {
-  margin-left: auto;
-  margin-right: 10px;
-  margin-top: 10px;
-  padding:2px 5px;
-  background:#ccc;
-}
-#close:hover {
-  color:#fff;
-  } */
-
 h1 {
   margin-top: 0px;
 }
@@ -103,7 +92,7 @@ h1 {
     font-family: Sen, sans-serif;
     font-size: 15px;
   }
-  
+    
   #form button {
     cursor: pointer;
     color: #1D67CD;
@@ -133,6 +122,8 @@ h1 {
     outline: none;
     box-sizing: border-box;
     transition: all 0.3s;
+    font-family: Sen, sans-serif;
+    font-size: 15px
   }
   
   #form input:valid {
@@ -144,7 +135,7 @@ h1 {
   }
 
   #form output {
-    width: 100%;
+    width: 75%;
     height: 34px;
     padding: 5px;
     /* border: 1px solid black; */

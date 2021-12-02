@@ -16,30 +16,33 @@
       <h1>Get a Price Quote</h1>
       <form id="form">
         <div id="categories">
-          <label for="business-select">Type of business:</label>
-          <select name="business" id="business-select">
+          <label for="business-select">Type of business</label>
+          <select name="business" id="business-select" required>
+            <option value="" disabled selected>Select your option</option>
             <option value="retail">Retail</option>
             <option value="restaurant">Restaurant</option>
             <option value="it-consulting">IT consulting</option>
           </select>
-          <label for="ownership-select">Type of ownership:</label>
-          <select name="ownership" id="ownership-select">
+          <label for="ownership-select">Type of ownership</label>
+          <select name="ownership" id="ownership-select" required>
+            <option value="" disabled selected>Select your option</option>
             <option value="sole-proprietorship">Sole Proprietorship</option>
             <option value="partnership">Partnership</option>
             <option value="corporation">Corporation</option>
           </select>
           <label for="transactions-select">Approximate transactions per year:</label>
-          <select name="transactions" id="transactions-select">
+          <select name="transactions" id="transactions-select" required>
+            <option value="" disabled selected>Select your option</option>
             <option value="0-50">0-50</option>
             <option value="50-150">50-150</option>
             <option value="150-250">150-250</option>
             <option value="250+">250+</option>
           </select>
-          <label for="services-select">Type of service:</label>
-          <select name="services" id="services-select">
+          <label for="services-select">Type of service</label>
+          <select name="services" id="services-select" required>
+            <option value="" disabled selected>Select your option</option>
             <option value="bookkeeping">Bookkeeping</option>
-            <option value="financial statements">Financial Statements</option>
-            <option value="tax returns preparation">Tax Returns Preparation</option>
+            <option value="financial statements">Financial Statements and Tax Returns Preparation</option>
             <option value="personal tax preparation">Personal Tax Preparation</option>
           </select>
           <label for="email">Email Address</label>
@@ -47,11 +50,12 @@
                placeholder="email@address.com" required>  
         </div>        
         <button type="submit" id="submit-btn">Submit</button>
+        <label for="result">Price range</label>
         <output type="text" id="result">
         <!-- Error/Success Message -->
-        <div class="message-container">
+        <!-- <div class="message-container">
           <h3 id="message"></h3>
-        </div>  
+        </div>   -->
       </form>
     </div>
 

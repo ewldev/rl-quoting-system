@@ -1,7 +1,7 @@
 const form = document.getElementById('form');
-const messageContainer = document.querySelector('.message-container');
-const message = document.getElementById('message');
-let isValid = false;
+// const messageContainer = document.querySelector('.message-container');
+// const message = document.getElementById('message');
+// let isValid = false;
 
 function validateForm() {
   // Use HTML constraint API to check form validity
@@ -23,11 +23,14 @@ function validateForm() {
     messageContainer.style.borderColor = 'green';
   }
 }
+
   function storeFormData() {
     const user = {
       email: form.email.value,
       business: form.business.value,
-      ownership: form.ownership.value
+      ownership: form.ownership.value,
+      transactions: form.transactions.value,
+      services: form.services.value
     };
     // Do something with user data
     console.log(user);
@@ -35,18 +38,22 @@ function validateForm() {
   
   function processFormData(e) {
     e.preventDefault();
-    // Validate Form
-    validateForm();
-    // Submit Form if Valid
-    if (isValid) {
-      
-      calculate2();
-      storeFormData();
-    }
+       storeFormData();      
   }
-  
+
+  // function processFormData(e) {
+  //   e.preventDefault();
+  //   // Validate Form
+  //   validateForm();
+  //   // Submit Form if Valid
+  //   if (isValid) {
+  //     storeFormData();      
+  //   }
+  // }
+
   // Event Listener
-  form.addEventListener('submit', processFormData);  
+  form.addEventListener('submit', processFormData); 
+  form.addEventListener('submit', calculate2); 
 
 
 
@@ -63,20 +70,17 @@ function calculate() {
     businessRate = 3;
   }
   if (ownership == 'sole-proprietorship') {
-    ownershipRate = 10;t
+    ownershipRate = 10;
   } else if (ownership == 'partnership') {
     ownershipRate = 20;
   } else {
     ownershipRate = 30;
   }
-
   result.value = businessRate * ownershipRate;
   console.log(business);
   console.log(businessRate);
   console.log(ownership);
   console.log(ownershipRate);
-  return result; 
-  
 }  
 
 
@@ -84,9 +88,7 @@ function calculate2() {
   const business = document.getElementById('business-select').value;
   const ownership = document.getElementById('ownership-select').value;  
   const result = document.getElementById('result');
-  // let businessRate;  
-  // let ownershipRate;
-
+  
   switch(business) {
     case "retail":
       businessRate = 1;
@@ -106,14 +108,14 @@ function calculate2() {
       break;
     case "corporation":
       ownershipRate = 30; 
-  }
-  
+  }  
   result.value = businessRate * ownershipRate;
   console.log(business);
   console.log(businessRate);
   console.log(ownership);
   console.log(ownershipRate);  
   }
+
 
 // close button
 window.onload = function(){
