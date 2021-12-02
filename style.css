@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Sen, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background: #c9ced3;
+}
+
+.container {
+  width: 480px;
+  height: 680px;
+  color: #E5EBFA;
+  background: #1D67CD;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
+}
+
+#close {
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding:2px 5px;
+  background:#ccc;
+}
+#close:hover {
+  color:#fff;
+  }
+
+h1 {
+  margin-top: 0px;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  
+  #categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #form label {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  #form select {
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-family: Sen, sans-serif;
+    font-size: 15px;
+  }
+  
+  #form button {
+    cursor: pointer;
+    color: #1D67CD;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 41px;
+    width: 50%;
+    font-family: Sen, sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 35px;   
+    margin-bottom: 35px;    
+  }
+
+  #form button:hover {
+    filter: brightness(200%);
+    background: rgb(22, 22, 22);
+  }
+  
+ #form input {
+    width: 100%;
+    height: 34px;
+    padding: 5px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  }
+  
+  #form input:valid {
+    border: 1px solid green;
+  }
+  
+  #form input:invalid {
+    border: 1px solid red;
+  }
+
+  #form output {
+    width: 100%;
+    height: 34px;
+    padding: 5px;
+    /* border: 1px solid black; */
+    color: black;
+    background: #fff;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+  }
+
+  .message-container {
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: black;
+  }

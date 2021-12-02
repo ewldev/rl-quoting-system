@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <title>Price Quote</title>
+</head>
+
+<body>
+  <div class="container">
+    
+      <span id='close'>x</span>
+      <h1>Get a Price Quote</h1>
+    
+     
+      <form id="form">
+        <div id="categories">
+          <label for="business-select">Type of business:</label>
+          <select name="business" id="business-select">
+            <option value="retail">Retail</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="it-consulting">IT consulting</option>
+          </select>
+          <label for="ownership-select">Type of ownership:</label>
+          <select name="ownership" id="ownership-select">
+            <option value="sole-proprietorship">Sole Proprietorship</option>
+            <option value="partnership">Partnership</option>
+            <option value="corporation">Corporation</option>
+          </select>
+          <label for="transactions-select">Approximate transactions per year:</label>
+          <select name="transactions" id="transactions-select">
+            <option value="0-50">0-50</option>
+            <option value="50-150">50-150</option>
+            <option value="150-250">150-250</option>
+            <option value="250+">250+</option>
+          </select>
+          <label for="services-select">Type of service:</label>
+          <select name="services" id="services-select">
+            <option value="bookkeeping">Bookkeeping</option>
+            <option value="financial statements">Financial Statements</option>
+            <option value="tax returns preparation">Tax Returns Preparation</option>
+            <option value="personal tax preparation">Personal Tax Preparation</option>
+          </select>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" 
+               placeholder="email@address.com" required>  
+        </div>        
+        <button type="submit" id="submit-btn">Submit</button>
+        <output type="text" id="result">
+        <!-- Error/Success Message -->
+        <div class="message-container">
+          <h3 id="message"></h3>
+        </div>  
+      </form>
+    </div>
+
+  <script type="text/javascript" src="./script.js"></script>
+  
+</body>
+
+</html>
