@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;  
-  background: #c9ced3;
+  background: #c9ced3;  
 }
 
 .container {
@@ -26,7 +26,7 @@ body {
   box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.4);
 }
 
-#close {
+#button-close {
   margin-left: auto;
   margin-top: 5px;
   margin-right: 5px;
@@ -43,14 +43,14 @@ body {
   text-indent: 100%;
   cursor: pointer;
 }
-#close:focus {
+#button-close:focus {
   outline: solid 0 transparent;
   box-shadow: 0 0 0 2px #8ed0f9;
 }
-#close:hover {
+#button-close:hover {
   background: rgba(29, 161, 142, 0.1);
 }
-#close:before, #close:after {
+#button-close:before, #button-close:after {
   position: absolute;
   top: 15%;
   left: calc(50% - .0625em);
@@ -61,7 +61,7 @@ body {
   background: currentcolor;
   content: "";
 }
-#close:after {
+#button-close:after {
   transform: rotate(-45deg);
 }
 
@@ -72,11 +72,12 @@ h1 {
 /* hide selections */
 #div1,#div2,#div3 {
   display: none;
+  flex-direction: column;
 }
 
 #form {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     margin-bottom: 40px;
   }

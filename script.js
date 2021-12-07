@@ -10,7 +10,7 @@ function showHide(elem) {
            divsO[i].style.display = 'none';
       }
       //unhide the selected div
-      document.getElementById('div'+elem.value).style.display = 'block';
+      document.getElementById('div'+elem.value).style.display = 'flex';
   }
 }
 
