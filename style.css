@@ -15,8 +15,8 @@ body {
 }
 
 .container {
-  width: 480px;
-  height: 680px;
+  width: 640px;
+  height: 940px;
   color: #E5EBFA;
   background: #1D67CD;;
   display: flex;
@@ -69,6 +69,11 @@ h1 {
   margin-top: 0px;
 }
 
+/* hide selections */
+#div1,#div2,#div3 {
+  display: none;
+}
+
 #form {
     display: flex;
     align-items: center;
@@ -76,11 +81,6 @@ h1 {
     margin-bottom: 40px;
   }
   
-  #categories {
-    display: flex;
-    flex-direction: column;
-  }
-
   #form label {
     font-size: 17px;
     margin-bottom: 4px;

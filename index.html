@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
   <link href="./style.css" rel="stylesheet">
   <title>Price Quote</title>
 </head>
@@ -15,51 +14,76 @@
       <button id='close'>close</button>
       <h1>Get a Price Quote</h1>
       <form id="form">
-        <div id="categories">
-          <label for="business-select">Type of business</label>
-          <select name="business" id="business-select" required>
+          <label for="category-select">Category</label>
+          <select name="category" onchange="showHide(this)" id="category-select" required ">
             <option value="" disabled selected>Select your option</option>
-            <option value="retail">Retail</option>
-            <option value="restaurant">Restaurant</option>
-            <option value="it-consulting">IT consulting</option>
+            <option value="1">Financial Statements & Tax Returns Preparation</option>               
+            <option value="2">Incorporation & Business Accounts Registration</option>
+            <option value="3">Personal Tax Preparation</option>
           </select>
-          <label for="ownership-select">Type of ownership</label>
-          <select name="ownership" id="ownership-select" required>
-            <option value="" disabled selected>Select your option</option>
-            <option value="sole-proprietorship">Sole Proprietorship</option>
-            <option value="partnership">Partnership</option>
-            <option value="corporation">Corporation</option>
-          </select>
-          <label for="transactions-select">Approximate transactions per year:</label>
-          <select name="transactions" id="transactions-select" required>
-            <option value="" disabled selected>Select your option</option>
-            <option value="0-50">0-50</option>
-            <option value="50-150">50-150</option>
-            <option value="150-250">150-250</option>
-            <option value="250+">250+</option>
-          </select>
-          <label for="services-select">Type of service</label>
-          <select name="services" id="services-select" required>
-            <option value="" disabled selected>Select your option</option>
-            <option value="bookkeeping">Bookkeeping</option>
-            <option value="financial statements">Financial Statements and Tax Returns Preparation</option>
-            <option value="personal tax preparation">Personal Tax Preparation</option>
-          </select>
+
+          <div id="div1">
+            <label for="service-select">Type of service</label>
+            <select name="service" id="service-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="retail">Compilation</option>               
+              <option value="restaurant">Review Engagement</option>
+              <option value="it-consulting">Audit Engagement</option>
+            </select>
+            <label for="trans-select">Transactions per year</label>
+            <select name="trans" id="trans-select" required>
+              <option value="">0-50</option>
+              <option value="">50-150</option>
+              <option value="">150+</option>
+            </select>
+          </div>
+          
+          <div id="div2">
+            <label for="service-select">Type of service</label>
+            <select name="service" id="service-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="retail">Compilation</option>               
+              <option value="restaurant">Review Engagement</option>
+              <option value="it-consulting">Audit Engagement</option>
+            </select>
+            <label for="trans-select">Transactions per year</label>
+            <select name="trans" id="trans-select" required>
+              <option value="">0-50</option>
+              <option value="">50-150</option>
+              <option value="">150+</option>
+            </select>
+          </div>
+          <div id="div3">
+            <label for="service-select">Type of service</label>
+            <select name="service" id="service-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="retail">Compilation</option>               
+              <option value="restaurant">Review Engagement</option>
+              <option value="it-consulting">Audit Engagement</option>
+            </select>
+            <label for="trans-select">Transactions per year</label>
+            <select name="trans" id="trans-select" required>
+              <option value="">0-50</option>
+              <option value="">50-150</option>
+              <option value="">150+</option>
+            </select>
+          </div>
+
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" 
                placeholder="email@address.com" required>  
-        </div>        
+                
         <button type="submit" id="submit-btn">Submit</button>
         <label for="result">Price range</label>
-        <output type="text" id="result">
+        <output type="text" id="result"> 
         <!-- Error/Success Message -->
         <!-- <div class="message-container">
-          <h3 id="message"></h3>
-        </div>   -->
+          <h3 id="message"></h3> 
+        </div>-->
       </form>
     </div>
 
-  <script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
   
 </body>
 
