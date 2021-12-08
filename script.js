@@ -1,23 +1,38 @@
-// const form = document.getElementById('form');
+const form = document.getElementById('form');
 // const messageContainer = document.querySelector('.message-container');
 // const message = document.getElementById('message');
 // let isValid = false;
 
-function showHide(elem) {
+function showHide1(elem) {
+  //get the divs to show/hide
+  divs0 = document.getElementById("form").getElementsByTagName('div');
   if(elem.selectedIndex != 0) {
        //hide the divs
-       for(var i=0; i < divsO.length; i++) {
-           divsO[i].style.display = 'none';
+       for(let i=0; i < divs0.length; i++) {
+           divs0[i].style.display = 'none';
       }
       //unhide the selected div
       document.getElementById('div'+elem.value).style.display = 'flex';
   }
 }
 
-window.onload=function() {
+function showHide2(elem) {
   //get the divs to show/hide
-  divsO = document.getElementById("form").getElementsByTagName('div');
+  divs1 = document.getElementById("form").getElementsByTagName('div');
+  if(elem.selectedIndex != 0) {
+    //hide the divs
+    for(let i=1; i < divs1.length; i++) {
+        divs1[i].style.display = 'none';
+   }
+   //unhide the selected div
+   document.getElementById('div'+elem.value).style.display = 'flex';
 }
+}
+
+// window.onload=function() {
+//   //get the divs to show/hide
+//   divsO = document.getElementById("form").getElementsByTagName('div');
+// }
 
   // function storeFormData() {
   //   const user = {
