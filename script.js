@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 // const messageContainer = document.querySelector('.message-container');
 // const message = document.getElementById('message');
 // let isValid = false;
-divs = document.getElementById('form').getElementsByTagName('div');
+const divs = document.getElementById('form').getElementsByTagName('div');
 
 function showHide1(elem) {
   //get the divs to show/hide  
@@ -31,6 +31,20 @@ function showHide2(elem) {
     console.log('elem.value', elem.value)
   }
 }
+
+function showHide3(elem) {
+  console.log('elem.selectedIndex', elem.selectedIndex);
+  if(elem.selectedIndex != 0) {
+    for(let i=2; i < divs.length; i++) {
+      console.log('i',i);
+        divs[i].style.display = 'none';
+        console.log('divs[i]',divs[i]);
+    }
+    document.getElementById('div'+elem.value).style.display = 'flex';
+    console.log('elem.value', elem.value)
+  }
+}
+
 
 
 // window.onload=function() {

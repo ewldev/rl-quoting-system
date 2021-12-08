@@ -23,7 +23,7 @@
           </select>
           
           <div id="div1">
-            <label for="category-select">Category1</label>
+            <label for="category-select">Category</label>
             <select name="category" onchange="showHide2(this)" id="category-select" required>
               <option value="" disabled selected>Select your option</option>
               <option value="4">Compilation</option>               
@@ -34,43 +34,69 @@
           
           <div id="div4">
             <label for="trans-select">Transactions per year</label>
-            <select name="trans" id="trans-select" required>
-              <option value="">0-50</option>
-              <option value="">50-150</option>
-              <option value="">150+</option>
+            <select name="trans" onchange="showHide3(this)" id="trans-select" required>
+              <!-- <option value="" disabled selected>Select your option</option> -->
+              <option value="" >Select your option</option>
+              <option value="7">0-50</option>
+              <option value="8">50-150</option>
+              <option value="9">150+</option>
             </select>
           </div>  
-          
+
           <div id="div5">
             <label for="service-select">Review Engagement</label>
             <select name="service" id="service-select" required>
               <option value="" disabled selected>Select your option</option>
-              <option value="retail">Compilation</option>               
-              <option value="restaurant">Review Engagement</option>
-              <option value="it-consulting">Audit Engagement</option>
+              <option value="9">150+</option>
             </select>
-            <!-- <label for="trans-select">Transactions per year</label>
-            <select name="trans" id="trans-select" required>
-              <option value="">0-50</option>
-              <option value="">50-150</option>
-              <option value="">150+</option>
-            </select> -->
           </div>
+          
           <div id="div6">
             <label for="service-select">Audit Engagement</label>
             <select name="service" id="service-select" required>
               <option value="" disabled selected>Select your option</option>
-              <option value="retail">Compilation</option>               
-              <option value="restaurant">Review Engagement</option>
-              <option value="it-consulting">Audit Engagement</option>
+              <option value="9">150+</option>
             </select>
-            <!-- <label for="trans-select">Transactions per year</label>
-            <select name="trans" id="trans-select" required>
-              <option value="">0-50</option>
-              <option value="">50-150</option>
-              <option value="">150+</option>
-            </select> -->
           </div>
+
+          <div id="div7">
+            <label for="50trans-select">Available services</label>
+            <select name="50trans" id="50trans-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="">Consulting Business</option>
+              <option value="">Holdings Company</option>
+            </select>
+          </div>  
+
+          <div id="div8">
+            <label for="150trans-select">Available services</label>
+            <select name="150trans" id="150trans-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="">Consulting Business</option>
+              <option value="">Holdings Company</option>
+              <option value="">Trading / Retail</option>
+              <option value="">Mortgage Incurance Broker</option>
+              <option value="">Home Renovation Contractor</option>
+              <option value="">Medical Professional Corporation</option>
+            </select>
+          </div>  
+
+          <div id="div9">
+            <label for="150+trans-select">Available services</label>
+            <select name="150+trans" id="150+trans-select" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="">Consulting Business</option>
+              <option value="">Holdings Company</option>
+              <option value="">Trading / Retail</option>
+              <option value="">Manufacturing</option>
+              <option value="">Restaurants</option>
+              <option value="">Mortgage Incurance Broker</option>
+              <option value="">Home Renovation Contractor</option>
+              <option value="">Medical Professional Corporation</option>
+            </select>
+          </div>  
+
+
         
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" 
