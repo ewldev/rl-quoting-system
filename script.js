@@ -2,32 +2,36 @@ const form = document.getElementById('form');
 // const messageContainer = document.querySelector('.message-container');
 // const message = document.getElementById('message');
 // let isValid = false;
+divs = document.getElementById('form').getElementsByTagName('div');
 
 function showHide1(elem) {
-  //get the divs to show/hide
-  divs0 = document.getElementById("form").getElementsByTagName('div');
+  //get the divs to show/hide  
+  console.log('elem.selectedIndex', elem.selectedIndex);  
   if(elem.selectedIndex != 0) {
-       //hide the divs
-       for(let i=0; i < divs0.length; i++) {
-           divs0[i].style.display = 'none';
+      //  hide unrelated divs
+       for(let i=0; i < divs.length; i++) {
+          divs[i].style.display = 'none';
+          console.log('divs[i]',divs[i]);
       }
       //unhide the selected div
       document.getElementById('div'+elem.value).style.display = 'flex';
+      console.log('elem.value', elem.value)
   }
 }
 
 function showHide2(elem) {
-  //get the divs to show/hide
-  divs1 = document.getElementById("form").getElementsByTagName('div');
+  console.log('elem.selectedIndex', elem.selectedIndex);
   if(elem.selectedIndex != 0) {
-    //hide the divs
-    for(let i=1; i < divs1.length; i++) {
-        divs1[i].style.display = 'none';
-   }
-   //unhide the selected div
-   document.getElementById('div'+elem.value).style.display = 'flex';
+    for(let i=1; i < divs.length; i++) {
+      console.log('i',i);
+        divs[i].style.display = 'none';
+        console.log('divs[i]',divs[i]);
+    }
+    document.getElementById('div'+elem.value).style.display = 'flex';
+    console.log('elem.value', elem.value)
+  }
 }
-}
+
 
 // window.onload=function() {
 //   //get the divs to show/hide
