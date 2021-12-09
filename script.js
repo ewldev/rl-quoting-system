@@ -3,6 +3,8 @@ const form = document.getElementById('form');
 // const message = document.getElementById('message');
 // let isValid = false;
 const divs = document.getElementById('form').getElementsByTagName('div');
+const result = document.getElementById('result');
+
 
 function showHide1(elem) {
   //get the divs to show/hide  
@@ -41,49 +43,121 @@ function showHide3(elem) {
         console.log('divs[i]',divs[i]);
     }
     document.getElementById('div'+elem.value).style.display = 'flex';
-    console.log('elem.value', elem.value)
+    console.log('elem.value', elem.value);
+    result.value = [];
+    console.log('result.value', result.value);
   }
 }
 
-
-
-// window.onload=function() {
-//   //get the divs to show/hide
-//   divsO = document.getElementById("form").getElementsByTagName('div');
-// }
-
-  // function storeFormData() {
-  //   const user = {
-  //     email: form.email.value,
-  //     business: form.business.value,
-  //     ownership: form.ownership.value,
-  //     transactions: form.transactions.value,
-  //     services: form.services.value
-  //   };
-  //   // Do something with user data
-  //   console.log(user);
-  // }
+// function storeFormData() {
+//     const user = {
+//       email: form.email.value,
+//       business: form.business.value,
+//       ownership: form.ownership.value,
+//       transactions: form.transactions.value,
+//       services: form.services.value
+//     };
+//     // Do something with user data
+//     console.log(user);
+//   }
   
-  // function processFormData(e) {
-  //   e.preventDefault();
-  //      storeFormData();      
-  // }
+  function processFormData(e) {
+    e.preventDefault();
+      //  storeFormData();      
+  }
 
-  // function processFormData(e) {
-  //   e.preventDefault();
-  //   // Validate Form
-  //   validateForm();
-  //   // Submit Form if Valid
-  //   if (isValid) {
-  //     storeFormData();      
-  //   }
-  // }
-
+ 
   // Event Listener
-//   form.addEventListener('submit', processFormData); 
-//   form.addEventListener('submit', calculate2); 
+  form.addEventListener('submit', processFormData); 
+  form.addEventListener('submit', calculate2); 
 
 
+  function calculate2() {
+    const fiftyTxn = document.getElementById('50txn-select').value;
+    const oneFiftyTxn = document.getElementById('150txn-select').value;  
+    const oneFiftyPlusTxn = document.getElementById('150+txn-select').value;  
+    
+    
+
+    switch(fiftyTxn) {      
+      // case '':
+      // serviceRate1 = '1500-1800';
+      // result.value = serviceRate1;  
+      //   break;
+      case 'consulting-business1':
+        serviceRate1 = '1500';
+        result.value = serviceRate1;  
+        break;
+      case 'holdings-company1':
+        serviceRate1 = 1700; 
+        result.value = serviceRate1;  
+    }
+    switch(oneFiftyTxn) {
+      case 'consulting-business':
+        serviceRate2 = 1800;
+        result.value = serviceRate2; 
+        break;
+      case 'holdings-company':
+        serviceRate2 = 2000;
+        result.value = serviceRate2; 
+        break;
+      case 'trading-retail':
+        serviceRate2 = 2500;
+        result.value = serviceRate2;  
+        break;
+      case 'mortgage-incurance-broker':
+        serviceRate2 = 1800;
+        result.value = serviceRate2; 
+        break;
+      case 'home-renovation-contractor':
+        serviceRate2 = 2300;
+        result.value = serviceRate2; 
+        break;
+      case 'medical-professional-corporation':
+        serviceRate2 = 2500;
+        result.value = serviceRate2  
+    }  
+    switch(oneFiftyPlusTxn) {
+      case 'consulting-business':
+        serviceRate3 = 2500;
+        result.value = serviceRate3; 
+        break;
+      case 'holdings-company':
+        serviceRate3 = 2700;
+        result.value = serviceRate3; 
+        break;
+      case 'trading-retail':
+        serviceRate3 = 3200; 
+        result.value = serviceRate3; 
+        break;
+      case 'manufacturing':
+        serviceRate3 = 3500;
+        result.value = serviceRate3; 
+        break;
+      case 'restaurant':
+        serviceRate3 = 3500;
+        result.value = serviceRate3; 
+        break;  
+      case 'mortgage-incurance-broker':        
+        serviceRate3 = 2500;
+        result.value = serviceRate3; 
+        break;
+      case 'home-renovation-contractor':
+        serviceRate3 = 3000;
+        result.value = serviceRate3; 
+        break;
+      case 'medical-professional-corporation':
+        serviceRate3 = 3500;
+        result.value = serviceRate3  
+    }  
+
+    
+    
+    // console.log('serviceRate',serviceRate);
+    // console.log(businessRate);
+    // console.log(ownership);
+    // console.log(ownershipRate);  
+    }
 
 // function calculate() {
 //   const business = document.getElementById('business-select').value;
@@ -112,47 +186,14 @@ function showHide3(elem) {
 // }  
 
 
-// function calculate2() {
-//   const business = document.getElementById('business-select').value;
-//   const ownership = document.getElementById('ownership-select').value;  
-//   const result = document.getElementById('result');
-  
-//   switch(business) {
-//     case "retail":
-//       businessRate = 1;
-//       break;
-//     case "restaurant":
-//       businessRate = 2;
-//       break;
-//     case "it-consulting":
-//       businessRate = 3;
-//   }
-//   switch(ownership) {
-//     case "sole-proprietorship":
-//       ownershipRate = 10;
-//       break;
-//     case "partnership":
-//       ownershipRate = 20;
-//       break;
-//     case "corporation":
-//       ownershipRate = 30; 
-//   }  
-//   result.value = businessRate * ownershipRate;
-//   console.log(business);
-//   console.log(businessRate);
-//   console.log(ownership);
-//   console.log(ownershipRate);  
-//   }
-
-
 // close button
-// window.onload = function(){
-//   document.getElementById('close').onclick = function(){
-//       this.parentNode.parentNode
-//       .removeChild(this.parentNode);
-//       return false;
-//   };
-// };
+window.onload = function(){
+  document.getElementById('button-close').onclick = function(){
+      this.parentNode.parentNode
+      .removeChild(this.parentNode);
+      return false;
+  };
+};
   
 
 
