@@ -42,6 +42,7 @@ function showHide3(elem3) {
     }    
     document.getElementById('div'+elem3.value).style.display = 'flex';
   }
+  resetValues();
 }
 
 // function storeFormData() {
@@ -63,15 +64,15 @@ function showHide3(elem3) {
 
  
   // Event Listener
-  form.addEventListener('submit', processFormData);   
-  
+  form.addEventListener('submit', processFormData);     
   form.addEventListener('submit', calculate); 
+  //form.addEventListener('submit', reset);
 
-  form.addEventListener('submit', reset)
   
   
+  
 
-  function reset() {
+  function resetValues() {
     fiftyTxn.value = '';
     oneFiftyTxn.value = ''; 
     oneFiftyPlusTxn.value = '';  
