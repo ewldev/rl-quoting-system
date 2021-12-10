@@ -15,7 +15,7 @@
       <h1>Get a Price Quote</h1>
       <form id="form">
           <label for="service-select">Type of service</label>
-          <select name="service" onchange="showHide1(this)" id="service-select" required >
+          <select name="service" onchange="showHide1(service)" id="service-select" required >
             <option value="" disabled selected>Select your option</option>
             <option value="1">Financial Statements & Tax Returns Preparation</option>               
             <option value="2">Incorporation & Business Accounts Registration</option>
@@ -34,7 +34,7 @@
           
           <div id="div4">
             <label for="c-txn-select">Transactions per year</label>
-            <select name="c-txn" onchange="showHide3(this)" id="c-txn-select" required >
+            <select name="ctxn" onchange="showHide3(ctxn)" id="c-txn-select" required >
               <!-- <option value="" disabled selected>Select your option</option> -->
               <option value="" >Select your option</option>
               <option value="7">0-50</option>
