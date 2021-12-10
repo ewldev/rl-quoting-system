@@ -15,7 +15,7 @@
       <h1>Get a Price Quote</h1>
       <form id="form">
           <label for="service-select">Type of service</label>
-          <select name="service" onchange="showHide1(service)" id="service-select" required >
+          <select name="service" onchange="showHide1(this)" id="service-select" required >
             <option value="" disabled selected>Select your option</option>
             <option value="1">Financial Statements & Tax Returns Preparation</option>               
             <option value="2">Incorporation & Business Accounts Registration</option>
@@ -23,8 +23,8 @@
           </select>
           
           <div id="div1">
-            <label for="category-select">Category</label>
-            <select name="category" onchange="showHide2(this)" id="category-select" required>
+            <label for="category1">Category</label>
+            <select name="category1" onchange="showHide2(this)" id="category1" required>
               <option value="" disabled selected>Select your option</option>
               <option value="4">Compilation</option>               
               <option value="5">Review Engagement</option>

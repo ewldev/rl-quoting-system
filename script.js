@@ -3,12 +3,14 @@
 // const message = document.getElementById('message');
 // let isValid = false;
 const divs = document.getElementById('form').getElementsByTagName('div');
-const fiftyTxn = document.getElementById('50txn-service');
-const oneFiftyTxn = document.getElementById('150txn-service');  
-const oneFiftyPlusTxn = document.getElementById('150uptxn-service'); 
+const category1 = document.getElementById('category1');
 const compilation = document.getElementById('compilation-txn');
 const reviewEgmt = document.getElementById('review-txn');
 const auditEgmt = document.getElementById('audit-txn');
+const fiftyTxn = document.getElementById('50txn-service');
+const oneFiftyTxn = document.getElementById('150txn-service');  
+const oneFiftyPlusTxn = document.getElementById('150uptxn-service'); 
+
 
 let serviceRate = 0;
 
@@ -22,6 +24,7 @@ function showHide1(elem1) {
       //unhide the selected div
       document.getElementById('div'+elem1.value).style.display = 'flex';      
   }
+  resetCategory();
 }
 
 function showHide2(elem2) {
@@ -69,7 +72,11 @@ function showHide3(elem3) {
   //form.addEventListener('submit', reset);
 
   
-  
+  function resetCategory() {
+    category1.value = '';
+    console.log('category1 value reset',category1.value);
+  }
+
   function resetTransactions() {
     compilation.value = '';
     reviewEgmt.value = '';
