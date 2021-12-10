@@ -3,13 +3,12 @@
 // const message = document.getElementById('message');
 // let isValid = false;
 const divs = document.getElementById('form').getElementsByTagName('div');
-// const result = document.getElementById('result');
-
-const fiftyTxn = document.getElementById('50txn-select');
-    // const fiftyTxn1 = document.getElementById('50txn-select');
-    
-    const oneFiftyTxn = document.getElementById('150txn-select');  
-    const oneFiftyPlusTxn = document.getElementById('150+txn-select'); 
+const fiftyTxn = document.getElementById('50txn-service');
+const oneFiftyTxn = document.getElementById('150txn-service');  
+const oneFiftyPlusTxn = document.getElementById('150uptxn-service'); 
+const compilation = document.getElementById('compilation-txn');
+const reviewEgmt = document.getElementById('review-txn');
+const auditEgmt = document.getElementById('audit-txn');
 
 let serviceRate = 0;
 
@@ -33,6 +32,7 @@ function showHide2(elem2) {
     }
     document.getElementById('div'+elem2.value).style.display = 'flex';
   }
+  resetTransactions();
 }
 
 function showHide3(elem3) {
@@ -70,7 +70,15 @@ function showHide3(elem3) {
 
   
   
-  
+  function resetTransactions() {
+    compilation.value = '';
+    reviewEgmt.value = '';
+    auditEgmt.value = '';
+    console.log('complilation value reset',compilation.value);
+    console.log('reviewEgmt value reset',reviewEgmt.value);
+    console.log('auditEgmt value reset',auditEgmt.value); 
+    
+  }
 
   function resetValues() {
     fiftyTxn.value = '';
@@ -200,8 +208,8 @@ function showHide3(elem3) {
     
 
 // function calculate2() {
-//   const business = document.getElementById('business-select').value;
-//   const ownership = document.getElementById('ownership-select').value;
+//   const business = document.getElementById('business-service').value;
+//   const ownership = document.getElementById('ownership-service').value;
 //   const result = document.getElementById('result');
 
 //   if (business == 'retail') {
