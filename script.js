@@ -5,8 +5,8 @@
 const divs = document.getElementById('form').getElementsByTagName('div');
 const category1 = document.getElementById('category1');
 const compilation = document.getElementById('compilation-txn');
-// const reviewEgmt = document.getElementById('review-txn');
-// const auditEgmt = document.getElementById('audit-txn');
+const reviewEgmt = document.getElementById('review-txn');
+const auditEgmt = document.getElementById('audit-txn');
 const fiftyTxn = document.getElementById('50txn-service');
 const oneFiftyTxn = document.getElementById('150txn-service');  
 const oneFiftyPlusTxn = document.getElementById('150uptxn-service'); 
@@ -28,8 +28,7 @@ function showHide1(elem1) {
 function showHide2(elem2) {
   if(elem2.selectedIndex != 0) {
     for(let i=1; i < divs.length; i++) {
-        divs[i].style.display = 'none';
-        
+        divs[i].style.display = 'none';        
     }
     document.getElementById('div'+elem2.value).style.display = 'flex';
   }
@@ -43,7 +42,7 @@ function showHide3(elem3) {
     }    
     document.getElementById('div'+elem3.value).style.display = 'flex';
   }
-  resetValues();
+  resetValues(); //remove previous transaction and serviceRate values when compilation transactions are changed, allowing new values to be pulled  
 }
   
 function processFormData(e) {
@@ -54,7 +53,7 @@ function processFormData(e) {
   // Event Listener
   form.addEventListener('submit', processFormData);     
   form.addEventListener('submit', calculate); 
-  //form.addEventListener('submit', reset);
+  
   
   function resetCategory() {
     category1.value = '';
@@ -63,11 +62,11 @@ function processFormData(e) {
 
   function resetTransactions() {
     compilation.value = '';
-    // reviewEgmt.value = '';
-    // auditEgmt.value = '';
+    reviewEgmt.value = '';
+    auditEgmt.value = '';
     console.log('complilation value reset',compilation.value);
-    // console.log('reviewEgmt value reset',reviewEgmt.value);
-    // console.log('auditEgmt value reset',auditEgmt.value);     
+    console.log('reviewEgmt value reset',reviewEgmt.value);
+    console.log('auditEgmt value reset',auditEgmt.value);     
   }
 
   function resetValues() {
@@ -92,40 +91,40 @@ function processFormData(e) {
     // console.log('fiftyTxn1',fiftyTxn1);
     // console.log('fiftyTxn1.length',fiftyTxn1.options.length);
     
-    // switch(compilation.value) {
-    //   case '7':
-    //     serviceRate = '1500-1800';
-    //     result.value = serviceRate;
-    //     break;
-    //   case '8':
-    //     serviceRate = '1800-2500';
-    //     result.value = serviceRate;
-    //     break;
-    //   case '9':
-    //     serviceRate = '2500-3500'; 
-    //     result.value = serviceRate; 
-    //     break;
-    //   default:
-    //      break;  
-    // }
+    switch(compilation.value) {
+      case '7':
+        serviceRate = '1500-1800';
+        result.value = serviceRate;
+        break;
+      case '8':
+        serviceRate = '1800-2500';
+        result.value = serviceRate;
+        break;
+      case '9':
+        serviceRate = '2500-3500'; 
+        result.value = serviceRate; 
+        break;
+      default:
+         break;  
+    }
 
-    // switch(reviewEgmt.value) {
-    //   case '10':
-    //     serviceRate = '5500-7500';
-    //     result.value = serviceRate;
-    //     break;
-    //   default:
-    //     break;  
-    // }
+    switch(reviewEgmt.value) {
+      case '10':
+        serviceRate = '5500-7500';
+        result.value = serviceRate;
+        break;
+      default:
+        break;  
+    }
 
-    // switch(auditEgmt.value) {
-    //   case '11':
-    //     serviceRate = '9000-12000';
-    //     result.value = serviceRate;
-    //     break;
-    //   default:
-    //      break;  
-    // }
+    switch(auditEgmt.value) {
+      case '11':
+        serviceRate = '9000-12000';
+        result.value = serviceRate;
+        break;
+      default:
+         break;  
+    }
 
     switch(fiftyTxn.value) {      
       // case '':
