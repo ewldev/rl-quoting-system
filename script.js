@@ -127,10 +127,6 @@ function processFormData(e) {
     }
 
     switch(fiftyTxn.value) {      
-      // case '':
-      // serviceRate1 = '1500-1800';
-      // result.value = serviceRate1;  
-      //   break;     
       case 'consulting-business1':
         serviceRate = 1500;
         result.value = serviceRate;  

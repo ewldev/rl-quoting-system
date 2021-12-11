@@ -15,7 +15,7 @@
       <h1>Get a Price Quote</h1>
       <form id="form">
           <label for="service-select">Type of service</label>
-          <select name="service" onchange="showHide1(this)" id="service-select" required >
+          <select name="service" onchange="showHide1(service)" id="service-select" required >
             <option value="" disabled selected>Select your option</option>
             <option value="1">Financial Statements & Tax Returns Preparation</option>               
             <option value="2">Incorporation & Business Accounts Registration</option>
@@ -24,7 +24,7 @@
           
           <div id="div1">
             <label for="category1">Category</label>
-            <select name="category1" onchange="showHide2(this)" id="category1" required>
+            <select name="category1" onchange="showHide2(category1)" id="category1" required>
               <option value="" disabled selected>Select your option</option>
               <option value="4">Compilation</option>               
               <option value="5">Review Engagement</option>
@@ -34,7 +34,7 @@
           
           <div id="div4">
             <label for="compilation-txn">Transactions per year</label>
-            <select name="compilation-txn" onchange="showHide3(this)" id="compilation-txn" >
+            <select name="compilation" onchange="showHide3(compilation)" id="compilation-txn" required>
               <!-- <option value="" disabled selected>Select your option</option> -->
               <option value="" disabled selected >Select your option</option>
               <option value="7">0-50</option>
@@ -47,7 +47,7 @@
             <label for="review-txn">Transactions per year</label>
             <select name="review-txn" id="review-txn">
               <option value="" disabled selected >Select your option</option>
-              <option value="10">150+</option>
+              <option value="10">150+</option>                      
             </select>
           </div>
           
@@ -55,7 +55,7 @@
             <label for="audit-txn">Transactions per year</label>
             <select name="audit-txn" id="audit-txn">
               <option value="" disabled selected >Select your option</option>
-              <option value="11">150+</option>
+              <option value="11">150+</option>              
             </select>
           </div>
 
@@ -63,7 +63,6 @@
             <label for="50txn-service">Available services (optional)</label>
             <select name="50txn-service" id="50txn-service" >
               <option value="" >Select your option</option>
-              <!-- <option value="" disabled selected >Select your option</option> -->
               <option value="consulting-business1">Consulting Business</option>
               <option value="holdings-company1">Holdings Company</option>
             </select>
