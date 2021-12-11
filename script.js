@@ -37,7 +37,7 @@ function showHide2(elem2) {
 
 function showHide3(elem3) {
   if(elem3.selectedIndex != 0) {
-    for(let i=2; i < divs.length; i++) {
+    for(let i=4; i < divs.length; i++) {
         divs[i].style.display = 'none';
     }    
     document.getElementById('div'+elem3.value).style.display = 'flex';
