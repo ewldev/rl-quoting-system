@@ -32,8 +32,27 @@ function showHide2(elem2) {
     }
     document.getElementById('div'+elem2.value).style.display = 'flex';
   }
+ console.log('elem2.value',elem2.value);
+  setRequired2(elem2);  
   resetTransactions();
-}
+ }
+
+function setRequired2 (elem2) {
+  if (elem2.value == '4' ) {
+    compilation.required = true;
+    reviewEgmt.required = false;
+    auditEgmt.required = false;
+  } else if (elem2.value == '5') {
+    compilation.required = false;
+    reviewEgmt.required = true;
+    auditEgmt.required = false;
+  } else if (elem2.value == '6') {
+    compilation.required = false;
+    reviewEgmt.required = false;
+    auditEgmt.required = true;
+ }
+  console.log('elem2.value',elem2.value);
+ }
 
 function showHide3(elem3) {
   if(elem3.selectedIndex != 0) {
