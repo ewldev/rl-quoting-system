@@ -15,8 +15,7 @@ body {
 }
 
 .container {
-  width: 640px;
-  height: 940px;
+  width: 100%;
   color: #E5EBFA;
   background: #1D67CD;;
   display: flex;
@@ -84,11 +83,16 @@ h1 {
   
   #form label {
     font-size: 17px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
     margin-bottom: 4px;
   }
   #form select {
+    width: 330px;
     padding: 5px;
     border-radius: 4px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
     margin-bottom: 20px;
     font-family: Sen, sans-serif;
     font-size: 15px;
