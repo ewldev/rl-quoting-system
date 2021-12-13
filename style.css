@@ -69,7 +69,7 @@ h1 {
 }
 
 /* hide selections */
-#div1, #div4, #div5, #div6, #div7, #div8, #div9 {
+#div1, #div4, #div5, #div6, #div7, #div8, #div9, #result {
   display: none;
   flex-direction: column;
 }
@@ -149,6 +149,17 @@ h1 {
     outline: none;
     box-sizing: border-box;
     transition: all 0.3s;
+  }
+
+  #div2, #div3 {
+    width: 92%;
+    padding: 0px 8px;
+    color: black;
+    background: #fff;
+    border-radius: 5px;
+  }
+  #div2 p, #div3 p {
+    margin: 5px 0;
   }
 
   .message-container {
