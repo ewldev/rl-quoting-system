@@ -15,7 +15,7 @@ const result = document.getElementById('result');
 let serviceRate = 0;
 
 function showHide1(elem) {
-  result.style.display = 'inline'; 
+  
   //get the divs to show/hide  
   if (elem.selectedIndex != 0) {
       //  hide unrelated divs
@@ -33,6 +33,8 @@ function showHide1(elem) {
   resetCategory();  
   resetTransactions()
   resetValues();
+  result.style.display = 'inline'; 
+  result.value = '';
 
   console.log('category value showHide1',category.value);
   console.log('complilation value',compilation.value);
@@ -52,16 +54,38 @@ function showHide2(elem) {
     }
     document.getElementById('div'+elem.value).style.display = 'flex';
   }
- console.log('elem2.value',elem.value);
-  setRequired2(elem);  
+  console.log('category value showHide2',category.value);
+  console.log('complilation value',compilation.value);
+    console.log('reviewEgmt value',reviewEgmt.value);
+    console.log('auditEgmt value',auditEgmt.value);     
+  console.log('fiftyTxn value showHide2',fiftyTxn.value);
+    console.log('oneFiftyTxn value showHide2',oneFiftyTxn.value);
+    console.log('oneFiftyPlusTxn value showHide2',oneFiftyPlusTxn.value); 
+    console.log ('serviceRate showHide2',serviceRate); 
+  
+  setRequired2(elem); 
   resetTransactions();
+  resetValues();
+  result.value = '';
+
+  console.log('category value showHide2',category.value);
+  console.log('complilation value',compilation.value);
+    console.log('reviewEgmt value',reviewEgmt.value);
+    console.log('auditEgmt value',auditEgmt.value);     
+  console.log('fiftyTxn value showHide2',fiftyTxn.value);
+    console.log('oneFiftyTxn value showHide2',oneFiftyTxn.value);
+    console.log('oneFiftyPlusTxn value showHide2',oneFiftyPlusTxn.value); 
+    console.log ('serviceRate showHide2',serviceRate); 
  }
 
  function setRequired (elem) {
   if (elem.value == '1' ) {
     category.required = true;
   } else {
-    category.required = false;    
+    category.required = false;  
+    compilation.required = false;
+    reviewEgmt.required = false;
+    auditEgmt.required = false;  
  }
   console.log('elem.value',elem.value);
  } 
@@ -140,7 +164,6 @@ function resetCategory() {
       case '2':
         document.getElementById('div2').style.display = 'block';     
         result.style.display = 'none'; 
-        // document.getElementById('result-label').style.display = 'none';       
         break;
       case '3':
         document.getElementById('div3').style.display = 'block'; 
