@@ -75,7 +75,7 @@ h1 {
 }
 
 #form {
-    width: 330px;
+    width: 320px;
     display: flex;
     /* align-items: center; */
     flex-direction: column;
