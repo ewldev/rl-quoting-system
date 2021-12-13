@@ -3,7 +3,8 @@
 // const message = document.getElementById('message');
 // let isValid = false;
 const divs = document.getElementById('form').getElementsByTagName('div');
-const category1 = document.getElementById('category1');
+const service = document.getElementById('service');
+const category = document.getElementById('category');
 const compilation = document.getElementById('compilation-txn');
 const reviewEgmt = document.getElementById('review-txn');
 const auditEgmt = document.getElementById('audit-txn');
@@ -12,55 +13,59 @@ const oneFiftyTxn = document.getElementById('150txn-service');
 const oneFiftyPlusTxn = document.getElementById('150uptxn-service'); 
 let serviceRate = 0;
 
-function showHide1(elem1) {
+function showHide1(elem) {
   //get the divs to show/hide  
-  if(elem1.selectedIndex != 0) {
+  if (elem.selectedIndex != 0) {
       //  hide unrelated divs
        for(let i=0; i < divs.length; i++) {
-          divs[i].style.display = 'none';          
-      }
+          divs[i].style.display = 'none'; 
+       }
+  }                  
       //unhide the selected div
-      document.getElementById('div'+elem1.value).style.display = 'flex';      
-  }
-  resetCategory();
+  if (elem.value == 1) {
+      document.getElementById('div1').style.display = 'flex'; 
+  }  
+ resetCategory();
 }
 
-function showHide2(elem2) {
-  if(elem2.selectedIndex != 0) {
+function showHide2(elem) {
+  if(elem.selectedIndex != 0) {
     for(let i=1; i < divs.length; i++) {
-        divs[i].style.display = 'none';        
+        divs[i].style.display = 'none';               
     }
-    document.getElementById('div'+elem2.value).style.display = 'flex';
+    document.getElementById('div'+elem.value).style.display = 'flex';
   }
- console.log('elem2.value',elem2.value);
-  setRequired2(elem2);  
+ console.log('elem2.value',elem.value);
+  setRequired2(elem);  
   resetTransactions();
  }
 
-function setRequired2 (elem2) {
-  if (elem2.value == '4' ) {
+function setRequired2 (elem) {
+  if (elem.value == '4' ) {
     compilation.required = true;
     reviewEgmt.required = false;
     auditEgmt.required = false;
-  } else if (elem2.value == '5') {
+  } else if (elem.value == '5') {
     compilation.required = false;
     reviewEgmt.required = true;
     auditEgmt.required = false;
-  } else if (elem2.value == '6') {
+  } else if (elem.value == '6') {
     compilation.required = false;
     reviewEgmt.required = false;
     auditEgmt.required = true;
  }
-  console.log('elem2.value',elem2.value);
+  console.log('elem2.value',elem.value);
  }
 
-function showHide3(elem3) {
-  if(elem3.selectedIndex != 0) {
-    for(let i=4; i < divs.length; i++) {
+function showHide3(elem) {
+  if(elem.selectedIndex != 0) {
+    for(let i=2; i < divs.length; i++) {
         divs[i].style.display = 'none';
+        // console.log('divsi', divs[i]);         
     }    
-    document.getElementById('div'+elem3.value).style.display = 'flex';
+    document.getElementById('div'+elem.value).style.display = 'flex';
   }
+  console.log('elem3.value',elem.value);
   resetValues(); //remove previous transaction and serviceRate values when compilation transactions are changed, allowing new values to be pulled  
 }
   
@@ -69,14 +74,9 @@ function processFormData(e) {
       //  storeFormData();      
 }
  
-  // Event Listener
-  form.addEventListener('submit', processFormData);     
-  form.addEventListener('submit', calculate); 
-  
-  
-  function resetCategory() {
-    category1.value = '';
-    console.log('category1 value reset',category1.value);
+function resetCategory() {
+    category.value = '';
+    console.log('category value reset',category.value);
   }
 
   function resetTransactions() {
@@ -110,6 +110,13 @@ function processFormData(e) {
     // console.log('fiftyTxn1',fiftyTxn1);
     // console.log('fiftyTxn1.length',fiftyTxn1.options.length);
     
+    // switch(service.value) {
+    //   case '2':
+    //     document.getElementById('div2').style.display = 'flex';
+    //     break;
+    //     default:
+    //        break;  
+    // }
     switch(compilation.value) {
       case '7':
         serviceRate = '1500-1800';
@@ -170,7 +177,7 @@ function processFormData(e) {
         serviceRate = 2500;
         result.value = serviceRate;  
         break;
-      case 'mortgage-incurance-broker2':
+      case 'mortgage-insurance-broker2':
         serviceRate = 1800;
         result.value = serviceRate; 
         break;
@@ -206,7 +213,7 @@ function processFormData(e) {
         serviceRate = 3500;
         result.value = serviceRate; 
         break;  
-      case 'mortgage-incurance-broker3':        
+      case 'mortgage-insurance-broker3':        
         serviceRate = 2500;
         result.value = serviceRate; 
         break;
@@ -227,6 +234,7 @@ function processFormData(e) {
     console.log('oneFiftyPlusTxn value calculate end',oneFiftyPlusTxn.value); 
     console.log ('serviceRate calculate end',serviceRate);
   }  
+
   
 // function calculate2() {
 //   const business = document.getElementById('business-service').value;
@@ -274,6 +282,10 @@ window.onload = function(){
       return false;
   };
 };
+
+// Event Listener
+form.addEventListener('submit', processFormData);     
+form.addEventListener('submit', calculate); 
   
 
 

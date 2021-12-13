@@ -14,8 +14,8 @@
       <button id='button-close'>close</button>
       <h1>Get a Price Quote</h1>
       <form id="form">
-          <label for="service-select">Type of service</label>
-          <select name="serviceselect" onchange="showHide1(this)" id="service-select" required >
+          <label for="service">Type of service</label>
+          <select name="service" onchange="showHide1(this)" id="service" required >
             <option value="" disabled selected>Select your option</option>
             <option value="1">Financial statements & tax returns preparation</option>               
             <option value="2">Incorporation & business accounts registration</option>
@@ -23,8 +23,8 @@
           </select>
           
           <div id="div1">
-            <label for="category1">Category</label>
-            <select name="category1" onchange="showHide2(this)" id="category1" required>
+            <label for="category">Category</label>
+            <select name="category" onchange="showHide2(this)" id="category" >
               <option value="" disabled selected>Select your option</option>
               <option value="4">Compilation</option>               
               <option value="5">Review Engagement</option>
@@ -32,28 +32,10 @@
             </select>
           </div>
           
-          <div id="div2">
-            <label for="">Incorporation & Business Accounts Registration</label>
-            <select name="" id="">
-              <option value="" disabled selected>Select your option</option>
-              <option value="4">Compilation</option>               
-              <option value="5">Review Engagement</option>
-              <option value="6">Audit Engagement</option>
-            </select>
-          </div>
-
-          <div id="div3">
-            <label for="">Personal Tax Preparation</label>
-            <select name="" id="" >
-              <option value="" disabled selected>Select your option</option>
-              <option value="4">Compilation</option>               
-              <option value="5">Review Engagement</option>
-              <option value="6">Audit Engagement</option>
-            </select>
-          </div>
+         
           <div id="div4">
             <label for="compilation-txn">Transactions per year</label>
-            <select name="compilation-txn" onchange="showHide3(compilation)" id="compilation-txn" >
+            <select name="compilation-txn" onchange="showHide3(this)" id="compilation-txn" >
               <option value="" disabled selected >Select your option</option>
               <option value="7">0-50</option>
               <option value="8">50-150</option>
@@ -93,7 +75,7 @@
               <option value="consulting-business2">Consulting business</option>
               <option value="holdings-company2">Holdings bompany</option>
               <option value="trading-retail2">Trading / Retail</option>
-              <option value="mortgage-insurance-broker2">Mortgage incurance broker</option>
+              <option value="mortgage-insurance-broker2">Mortgage insurance broker</option>
               <option value="home-renovation-contractor2">Home renovation contractor</option>
               <option value="medical-professional-corporation2">Medical professional corporation</option>
             </select>
@@ -108,20 +90,35 @@
               <option value="trading-retail3">Trading / Retail</option>
               <option value="manufacturing3">Manufacturing</option>
               <option value="restaurant3">Restaurant</option>
-              <option value="mortgage-insurance-broker3">Mortgage incurance broker</option>
+              <option value="mortgage-insurance-broker3">Mortgage insurance broker</option>
               <option value="home-renovation-contractor3">Home renovation contractor</option>
               <option value="medical-professional-corporation3">Medical professional corporation</option>
             </select>
           </div>  
         
-          <label for="email">Email Address</label>
+          <label for="email">Email address</label>
           <input type="email" id="email" name="email" 
                placeholder="email@address.com">  
                <!-- placeholder="email@address.com" required> -->
                 
         <button type="submit" id="submit-btn">Submit</button>
         <label for="result">Price range</label>
-        <output type="text" id="result"> 
+        <output type="text" id="result"> </output>
+        
+        <!-- Incorporation & business accounts registration -->
+        <div id="div2">
+          <p>$800 <br>
+          business trade name add $100</p>
+        </div>
+
+        <!-- Personal tax preparation -->
+        <div id="div3">
+          <p>standard $150 <br>
+            capital gain/loss add $100 <br>
+            self-employed business add $250 <br>
+            foreign property declaration add $150            
+          </p>    
+        </div>  
         <!-- Error/Success Message -->
         <!-- <div class="message-container">
           <h3 id="message"></h3> 
