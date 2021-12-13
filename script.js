@@ -29,6 +29,7 @@ function showHide1(elem) {
       result.style.display = 'inline'; 
   }  
   
+  setRequired(elem);  
   resetCategory();  
   resetTransactions()
   resetValues();
@@ -55,6 +56,15 @@ function showHide2(elem) {
   setRequired2(elem);  
   resetTransactions();
  }
+
+ function setRequired (elem) {
+  if (elem.value == '1' ) {
+    category.required = true;
+  } else {
+    category.required = false;    
+ }
+  console.log('elem.value',elem.value);
+ } 
 
 function setRequired2 (elem) {
   if (elem.value == '4' ) {
