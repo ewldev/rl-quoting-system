@@ -173,8 +173,11 @@ h1 {
   }  
   
 
-@media screen and (min-width: 430px) {
+@media screen and (min-width: 500px) {
     .container {
-      width: 420px ;
-  }    
+      width: 500px;
+    }
+    #form {
+      width: 369px;
+    }
 }    

@@ -190,15 +190,15 @@ function resetCategory() {
     }
     switch(compilation.value) {
       case '7':
-        serviceRate = '1500-1800';
+        serviceRate = '$1500-$1800';
         result.value = serviceRate;
         break;
       case '8':
-        serviceRate = '1800-2500';
+        serviceRate = '$1800-$2500';
         result.value = serviceRate;
         break;
       case '9':
-        serviceRate = '2500-3500'; 
+        serviceRate = '$2500-$3500'; 
         result.value = serviceRate; 
         break;
       default:
@@ -207,7 +207,7 @@ function resetCategory() {
 
     switch(reviewEgmt.value) {
       case '10':
-        serviceRate = '5500-7500';
+        serviceRate = '$5500-$7500';
         result.value = serviceRate;
         break;
       default:
@@ -216,7 +216,7 @@ function resetCategory() {
 
     switch(auditEgmt.value) {
       case '11':
-        serviceRate = '9000-12000';
+        serviceRate = '$9000-$12000';
         result.value = serviceRate;
         break;
       default:
@@ -230,7 +230,7 @@ function resetCategory() {
         result.value = serviceRate;  
         break;
       case 'holdings-company1':
-        serviceRate = 1700; 
+        serviceRate = '$1700'; 
         result.value = serviceRate; 
         break;
       default:
@@ -238,27 +238,27 @@ function resetCategory() {
     }    
     switch(oneFiftyTxn.value) {
       case 'consulting-business2':
-        serviceRate = 1800;
+        serviceRate = '$1800';
         result.value = serviceRate; 
         break;
       case 'holdings-company2':
-        serviceRate = 2000;
+        serviceRate = '$2000';
         result.value = serviceRate; 
         break;
       case 'trading-retail2':
-        serviceRate = 2500;
+        serviceRate = '$2500';
         result.value = serviceRate;  
         break;
       case 'mortgage-insurance-broker2':
-        serviceRate = 1800;
+        serviceRate = '$1800';
         result.value = serviceRate; 
         break;
       case 'home-renovation-contractor2':
-        serviceRate = 2300;
+        serviceRate = '$2300';
         result.value = serviceRate; 
         break;
       case 'medical-professional-corporation2':
-        serviceRate = 2500;
+        serviceRate = '$2500';
         result.value = serviceRate;
         break;
       default:
@@ -266,35 +266,35 @@ function resetCategory() {
     }  
     switch(oneFiftyPlusTxn.value) {
       case 'consulting-business3':
-        serviceRate = 2500;
+        serviceRate = '$2500';
         result.value = serviceRate; 
         break;
       case 'holdings-company3':
-        serviceRate = 2700;
+        serviceRate = '$2700';
         result.value = serviceRate; 
         break;
       case 'trading-retail3':
-        serviceRate = 3200; 
+        serviceRate = '$3200'; 
         result.value = serviceRate; 
         break;
       case 'manufacturing3':
-        serviceRate = 3500;
+        serviceRate = '$3500';
         result.value = serviceRate; 
         break;
       case 'restaurant3':
-        serviceRate = 3500;
+        serviceRate = '$3500';
         result.value = serviceRate; 
         break;  
       case 'mortgage-insurance-broker3':        
-        serviceRate = 2500;
+        serviceRate = '$2500';
         result.value = serviceRate; 
         break;
       case 'home-renovation-contractor3':
-        serviceRate = 3000;
+        serviceRate = '$3000';
         result.value = serviceRate; 
         break;
       case 'medical-professional-corporation3':
-        serviceRate = 3500;
+        serviceRate = '$3500';
         result.value = serviceRate;
         break;
       default:
