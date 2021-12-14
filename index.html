@@ -60,7 +60,7 @@
 
           <div id="div7">
             <label for="50txn-service">Available services (optional)</label>
-            <select name="50txn-service" id="50txn-service" >
+            <select name="50txn-service" onchange="resetServiceRate(this)" id="50txn-service" >
               <option value="" >Select your option</option>
               <option value="consulting-business1">Consulting business</option>
               <option value="holdings-company1">Holdings company</option>
@@ -82,7 +82,7 @@
 
           <div id="div9">
             <label for="150uptxn-service">Available services (optional)</label>
-            <select name="150uptxn-service" id="150uptxn-service" >
+            <select name="150uptxn-service" onchange="resetServiceRate(this)" id="150uptxn-service" >
               <option value="" >Select your option</option>
               <option value="consulting-business3">Consulting business</option>
               <option value="holdings-company3">Holdings company</option>
