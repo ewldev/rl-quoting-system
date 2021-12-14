@@ -14,8 +14,7 @@ const oneFiftyPlusTxn = document.getElementById('150uptxn-service');
 const result = document.getElementById('result');
 let serviceRate = 0;
 
-function showHide1(elem) {
-  
+function showHide1(elem) {  
   //get the divs to show/hide  
   if (elem.selectedIndex != 0) {
       //  hide unrelated divs
@@ -29,12 +28,20 @@ function showHide1(elem) {
       result.style.display = 'inline'; 
   }  
   
+  console.log('category value showHide1',category.value);
+  console.log('complilation value',compilation.value);
+    console.log('reviewEgmt value',reviewEgmt.value);
+    console.log('auditEgmt value',auditEgmt.value);     
+  console.log('fiftyTxn value showHide1',fiftyTxn.value);
+    console.log('oneFiftyTxn value showHide1',oneFiftyTxn.value);
+    console.log('oneFiftyPlusTxn value showHide1',oneFiftyPlusTxn.value); 
+    console.log ('serviceRate showHide1',serviceRate); 
   setRequired(elem);  
   resetCategory();  
   resetTransactions()
   resetValues();
   result.style.display = 'inline'; 
-  result.value = '';
+  result.value = serviceRate;
 
   console.log('category value showHide1',category.value);
   console.log('complilation value',compilation.value);
@@ -116,6 +123,7 @@ function showHide3(elem) {
     document.getElementById('div'+elem.value).style.display = 'flex';
   }
   console.log('elem3.value',elem.value);
+  console.log ('serviceRate showHide3',serviceRate); 
   resetValues(); //remove previous transaction and serviceRate values when compilation transactions are changed, allowing new values to be pulled  
 }
   
@@ -142,11 +150,18 @@ function resetCategory() {
     fiftyTxn.value = '';
     oneFiftyTxn.value = ''; 
     oneFiftyPlusTxn.value = '';  
-    serviceRate = 0;
+    serviceRate = '';
     // console.log('fiftyTxn value reset',fiftyTxn.value);
     // console.log('oneFiftyTxn value reset',oneFiftyTxn.value);
     // console.log('oneFiftyPlusTxn value reset',oneFiftyPlusTxn.value);     
     // console.log ('serviceRate reset',serviceRate);
+  }
+
+  function resetServiceRate () {
+    console.log ('resetServiceRate start', serviceRate); 
+    serviceRate = '';
+    result.value = '';
+    console.log ('resetServiceRate end', serviceRate); 
   }
 
   function calculate() {      
@@ -208,7 +223,8 @@ function resetCategory() {
 
     switch(fiftyTxn.value) {      
       case 'consulting-business1':
-        serviceRate = 1500;
+        serviceRate = '$1500';
+        
         result.value = serviceRate;  
         break;
       case 'holdings-company1':
@@ -288,45 +304,6 @@ function resetCategory() {
     console.log('oneFiftyPlusTxn value calculate end',oneFiftyPlusTxn.value); 
     console.log ('serviceRate calculate end',serviceRate);
   }  
-
-  
-// function calculate2() {
-//   const business = document.getElementById('business-service').value;
-//   const ownership = document.getElementById('ownership-service').value;
-//   const result = document.getElementById('result');
-
-//   if (business == 'retail') {
-//     businessRate = 1;
-//   } else if (business == 'restaurant') {
-//     businessRate = 2;
-//   } else {
-//     businessRate = 3;
-//   }
-//   if (ownership == 'sole-proprietorship') {
-//     ownershipRate = 10;
-//   } else if (ownership == 'partnership') {
-//     ownershipRate = 20;
-//   } else {
-//     ownershipRate = 30;
-//   }
-//   result.value = businessRate * ownershipRate;
-//   console.log(business);
-//   console.log(businessRate);
-//   console.log(ownership);
-//   console.log(ownershipRate);
-// }  
-
-// function storeFormData() {
-//     const user = {
-//       email: form.email.value,
-//       business: form.business.value,
-//       ownership: form.ownership.value,
-//       transactions: form.transactions.value,
-//       services: form.services.value
-//     };
-//     // Do something with user data
-//     console.log(user);
-//   }
 
 // close button
 window.onload = function(){

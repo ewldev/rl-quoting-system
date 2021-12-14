@@ -12,7 +12,7 @@
 <body>
   <div class="container">
       <button id='button-close'>close</button>
-      <h1>Get a Price Quote</h1>
+      <h1>Get an Instant Quote</h1>
       <form id="form">
           <label for="service">Type of service</label>
           <select name="service" onchange="showHide1(this)" id="service" required >
@@ -69,10 +69,10 @@
 
           <div id="div8">
             <label for="150txn-service">Available services (optional)</label>
-            <select name="150txn-service" id="150txn-service" >
+            <select name="150txn-service" onchange="resetServiceRate(this)" id="150txn-service" >
               <option value="" >Select your option</option>
               <option value="consulting-business2">Consulting business</option>
-              <option value="holdings-company2">Holdings bompany</option>
+              <option value="holdings-company2">Holdings company</option>
               <option value="trading-retail2">Trading / Retail</option>
               <option value="mortgage-insurance-broker2">Mortgage insurance broker</option>
               <option value="home-renovation-contractor2">Home renovation contractor</option>
@@ -100,7 +100,7 @@
                placeholder="email@address.com">  
                <!-- placeholder="email@address.com" required> -->
         <button type="submit" id="submit-btn">Submit</button>
-        <label for="result">Estimate cost of service</label>
+        <label for="result">Estimated cost of service</label>
         <output type="text" id="result"> </output>
         
         <!-- Incorporation & business accounts registration -->
