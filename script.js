@@ -25,7 +25,6 @@ function showHide1(elem) {
       //unhide the selected div
   if (elem.value == 1) {
       document.getElementById('div1').style.display = 'flex';
-      result.style.display = 'inline'; 
   }  
   
   console.log('category value showHide1',category.value);
@@ -73,7 +72,7 @@ function showHide2(elem) {
   setRequired2(elem); 
   resetTransactions();
   resetValues();
-  result.value = '';
+  result.value = serviceRate;
 
   console.log('category value showHide2',category.value);
   console.log('complilation value',compilation.value);
@@ -122,9 +121,24 @@ function showHide3(elem) {
     }    
     document.getElementById('div'+elem.value).style.display = 'flex';
   }
-  console.log('elem3.value',elem.value);
-  console.log ('serviceRate showHide3',serviceRate); 
+  console.log('category value showHide3',category.value);
+  console.log('complilation value',compilation.value);
+    console.log('reviewEgmt value',reviewEgmt.value);
+    console.log('auditEgmt value',auditEgmt.value);     
+  console.log('fiftyTxn value showHide3',fiftyTxn.value);
+    console.log('oneFiftyTxn value showHide3',oneFiftyTxn.value);
+    console.log('oneFiftyPlusTxn value showHide3',oneFiftyPlusTxn.value); 
+   console.log ('serviceRate showHide3',serviceRate); 
   resetValues(); //remove previous transaction and serviceRate values when compilation transactions are changed, allowing new values to be pulled  
+  result.value = serviceRate;
+  console.log('category value showHide3',category.value);
+  console.log('complilation value',compilation.value);
+    console.log('reviewEgmt value',reviewEgmt.value);
+    console.log('auditEgmt value',auditEgmt.value);     
+  console.log('fiftyTxn value showHide3',fiftyTxn.value);
+    console.log('oneFiftyTxn value showHide3',oneFiftyTxn.value);
+    console.log('oneFiftyPlusTxn value showHide3',oneFiftyPlusTxn.value); 
+   console.log ('serviceRate showHide3',serviceRate); 
 }
   
 function processFormData(e) {
@@ -141,9 +155,6 @@ function resetCategory() {
     compilation.value = '';
     reviewEgmt.value = '';
     auditEgmt.value = '';
-    // console.log('complilation value reset',compilation.value);
-    // console.log('reviewEgmt value reset',reviewEgmt.value);
-    // console.log('auditEgmt value reset',auditEgmt.value);     
   }
 
   function resetValues() {
@@ -151,10 +162,6 @@ function resetCategory() {
     oneFiftyTxn.value = ''; 
     oneFiftyPlusTxn.value = '';  
     serviceRate = '';
-    // console.log('fiftyTxn value reset',fiftyTxn.value);
-    // console.log('oneFiftyTxn value reset',oneFiftyTxn.value);
-    // console.log('oneFiftyPlusTxn value reset',oneFiftyPlusTxn.value);     
-    // console.log ('serviceRate reset',serviceRate);
   }
 
   function resetServiceRate () {
@@ -169,12 +176,7 @@ function resetCategory() {
     console.log('oneFiftyTxn value calculate start',oneFiftyTxn.value);
     console.log('oneFiftyPlusTxn value calculate start',oneFiftyPlusTxn.value); 
     console.log ('serviceRate calculate start',serviceRate);    
-    // for (let i=0; i<fiftyTxn1.length; i++) {
-    //   fiftyTxn1.remove(i)
-    // }
-    // console.log('fiftyTxn1',fiftyTxn1);
-    // console.log('fiftyTxn1.length',fiftyTxn1.options.length);
-    
+        
     switch(service.value) {
       case '2':
         document.getElementById('div2').style.display = 'block';     
